@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seleniumtestdemoapp1-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seleniumtestdemoapp1
+  template:
+    metadata:
+      labels:
+        app: seleniumtestdemoapp1
+    spec:
+      containers:
+        - name: demoapp12
+          image: akshayaaaaaaaaaaaaaaaaaaaaaaa/week12demo:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
